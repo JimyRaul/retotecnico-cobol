@@ -47,14 +47,19 @@ dotnet run -- datos.csv
 ---
 
 ## 📁 Estructura del Proyecto
+La estructura del proyecto sigue una organización clara y modular: 
+El archivo `Program.cs` actúa como punto de entrada principal, mientras que la carpeta `Models` contiene la clase Transaccion que representa los datos de cada transacción. 
+La lógica de procesamiento y generación del reporte está encapsulada en `ProcesadorTransacciones.cs`, dentro de la carpeta `Services`, promoviendo la separación de responsabilidades y facilitando el mantenimiento del código.
 
-TransaccionesApp/  
-├── Program.cs  
-├── Models/Transaccion.cs  
-├── Services/ProcesadorTransacciones.cs  
-├── datos.csv  
-├── TransaccionesApp.csproj  
-└── README.md
+TransaccionesApp/
+├── Program.cs                     # Punto de entrada principal
+├── Models/
+│   └── Transaccion.cs             # Modelo de datos para las transacciones
+├── Services/
+│   └── ProcesadorTransacciones.cs # Lógica de lectura, procesamiento y reporte
+├── datos.csv                      # Archivo de prueba (entrada)
+├── TransaccionesApp.csproj        # Proyecto de consola .NET 8
+└── README.md                      # Documentación del proyecto
 
 ---
 
